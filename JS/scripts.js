@@ -1,33 +1,30 @@
 
+    // 1 ЗАДАЧА
+    
+    // let course = prompt("курс нөмірі 1, 2, 3 немесе 4")
+    // let isAlmaty= prompt("Келген жерініз АЛМАТЫ ма? yes/no")
+    // if(course<=3 && isAlmaty==="no"){
+    //     alert("СЕН КІРЕСІН ЖАТАХАНАҒА")
+    // }
+    // else{
+    //     alert("ҚАЙДА ТУРСАН ОНДА ТУР")
+    // } 
 
-//  1 задача
-// let age = 70
-// let isStudent = false
-// if(age>=65 || isStudent === true){
-//     alert('Сізге жеңілдік бар')
-// }
-// else{
-//     alert('Сізге жеңілдік Жоқ')
-// }
-
-// 2 задача
-// let num=Number(prompt("санды енгіз"))
-// if(10<=num && num<=20){
-//     alert(true)
-// }
-// else{
-//     alert(false)
-// }
-
-// 3 задача
-// let num1=-5
-// let num2=10
-// if(num1<0 || num2<0){
-//     alert(true)
-// }
-// if((num1<0 && num2<0) || (num1>0 && num2>0)){
-//     alert(false)
-// }
-
-
+    // 2 ЗАДАЧА
+    // alert("Оный шарты:Дұрыс жауап берілгенде әр сұраққа 1 балл беріледі" + "\n" + "Сұрақ қойылады жауапты енгізесіз");
+    // let question1 = prompt("Қазақстанның тәуелсіздік алған жылы");
+    // let question2 = prompt("Қазір оқып жатқан қаласы");
+    // let point = 0
+    // if(question1==="1991"){
+    //     point++
+    // }
+    // if(question2==="Almaty"){
+    //     point++
+    // }
+    // if(point===0){
+    //     alert("СІЗГЕ УПАЙ ҚОСЫЛМАДЫ")
+    // }
+    // else{
+    //     alert("СІЗГЕ "+ point +" УПАЙ ҚОСЫЛДЫ")
+    // }
 
