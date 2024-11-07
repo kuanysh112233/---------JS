@@ -1,12 +1,16 @@
 
 
-    let num = +prompt("0 мен 99 арасындағы санды енгізініз");
-    let a = Math.floor(num/10), b = num % 10
-    if(a===0){
-        alert('Биринши сан: ' + b)
+    let a = Number(prompt("Бірінші сан,"))
+    let b = Number(prompt("Екінкіші сан"))
+    let c  = Number(prompt("Үшінші сан"))
+    let num=a
+    switch(true){
+        case b>a && b>c:
+             num = b ;
+        break;
+        case c>a:
+            num = c;
+        break;
     }
-    else{
-        alert('Биринши сан: ' + a + '\n' + 'Екинши сан: ' + b)
-    }
-    
+    alert(num)
 
