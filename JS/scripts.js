@@ -1,16 +1,16 @@
 
+    // Үйжумысы
 
-    let a = Number(prompt("Бірінші сан,"))
-    let b = Number(prompt("Екінкіші сан"))
-    let c  = Number(prompt("Үшінші сан"))
-    let num=a
-    switch(true){
-        case b>a && b>c:
-             num = b ;
-        break;
-        case c>a:
-            num = c;
-        break;
+    let a = +prompt("санды енгініз")
+    for(let i = 1; i<=a; i++){
+        if(i%3===0 && i%5===0){
+            console.log(i)
+        }
+        if(i%3===0 && i%5===0 && i%2===0){
+
+            break;
+        }
+    
     }
-    alert(num)
+    
 
