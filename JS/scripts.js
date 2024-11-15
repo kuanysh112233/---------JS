@@ -1,30 +1,28 @@
-// үй жумысы \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-// for(let mumkindik=3; mumkindik!=0; mumkindik--){
-//     let soz = prompt("ҚАЗАҚ ХАНДЫҒЫ ҚАШАН ҚҰРЫЛДЫ  ");
-//     if(soz==="1465"){
-//         alert("siz durys jayap berdiniz");
-//          break;
-//     }
-//     if(mumkindik!==1){
-//         alert("cizde mymkindik azaidy: " + (mumkindik-1));
-//     }
-//     else{
-//         alert("cizde mymkindik kalmady");
-//         break;
-//     }
-// }
 
-const allStudentCount = +prompt("студенттердің санын енгізіңіз");
-let i  = allStudentCount
-let pointSum = 0
-while(i!==0){
-    const studentPoint = +prompt(i+' Студенттің баллы:')
-    pointSum = pointSum + studentPoint
-    i--
+// ҮЙ ЖУМЫСЫ  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+let number = +prompt("Санды жаз")
+
+let max, min;
+
+for(let i=1; i<=number; i++){
+    if(i%5==0){
+        if(i<min || !max){
+            min=i
+        }
+        if(i>max || !max){
+            max=i
+        }
+    }
 }
-alert('Орташа баға: '+ (pointSum/allStudentCount))
-
+if(min && max){
+    alert("Макс. сан:   " + max)
+    alert("Мин. сан:   " + min)
+}
+else{
+    console.log("Сан табылмады")
+}
 
 
         
