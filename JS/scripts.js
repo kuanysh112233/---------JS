@@ -1,32 +1,26 @@
 
 
-// ҮЙ ЖУМЫСЫ  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+// уй жумысы\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-let number = +prompt("Санды жаз")
-
-let max, min;
-
-for(let i=1; i<=number; i++){
-    if(i%5==0){
-        if(i<min || !max){
-            min=i
-        }
-        if(i>max || !max){
-            max=i
-        }
-    }
-}
-if(min && max){
-    alert("Макс. сан:   " + max)
-    alert("Мин. сан:   " + min)
-}
-else{
-    console.log("Сан табылмады")
+let words =prompt("бірінші сөз енгіз").toLowerCase() 
+let words2=prompt("екыншы сөз енгіз").toLowerCase() 
+ 
+  
+if (words==words2) { 
+        function name(compareWords) { 
+            words(words) 
+            words2(words2) 
+        } 
+       alert("бірдей сөздер")          
+} 
+else{ 
+        alert("создер бырдей емес") 
 }
 
 
-        
-    
+
+
+
 
 
 
