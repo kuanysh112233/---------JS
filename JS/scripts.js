@@ -1,27 +1,23 @@
 
 
-const switchToEuro = (value,moneyType)=>{
-    console.log(moneyType.toLocaleUpperCase())
-    if(moneyType.toLocaleUpperCase() ==="USA"){
-        return value * 0.85
+const showDiffNumbers =(numbersCount)=>{
+    let odd =0, even = 0, negative=0
+for (let i = 1; i<=numbersCount; i++){
+    const number = +prompt('Санды енгіз' +'('+ i +')')
+    if(String(number) === "NaN"){
+        alert("ТОЛЬКО ЦИФРЫ!");
+        i = i - 1;
+        continue;
     }
-    else if(moneyType.toLocaleUpperCase() ==="KZT"){
-        return value * 0.002
+    if(number<0){negative++}
+    if(number%2===0){
+        even++
     }
-    else{return value}
+    else{odd++}
 }
-
-let sum = 0
-let valutaSum = null
-let valuta =''
-
-while(true) {
-    valutaSum = +prompt("Ақша суммасын енгіз")
-    if(valutaSum===0){break;}
-    valuta = prompt("Валютаны енгіз")
-    if(valuta==='stop'){break;}
-    console.log(valutaSum,valuta)
-   sum = sum + switchToEuro(valutaSum,valuta)
+alert('тақ сандар саны: '+odd+'\n'+
+    'Жұп сандар саны: ' + even+ '\n'+
+    'Теріс сандар саны: '+ negative)
 }
-
-alert(sum)
+const numbers = +prompt("")
+showDiffNumbers(numbers)
