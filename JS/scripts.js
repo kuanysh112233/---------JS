@@ -1,23 +1,16 @@
 
 
-const showDiffNumbers =(numbersCount)=>{
-    let odd =0, even = 0, negative=0
-for (let i = 1; i<=numbersCount; i++){
-    const number = +prompt('Санды енгіз' +'('+ i +')')
-    if(String(number) === "NaN"){
-        alert("ТОЛЬКО ЦИФРЫ!");
-        i = i - 1;
-        continue;
-    }
-    if(number<0){negative++}
-    if(number%2===0){
-        even++
-    }
-    else{odd++}
-}
-alert('тақ сандар саны: '+odd+'\n'+
-    'Жұп сандар саны: ' + even+ '\n'+
-    'Теріс сандар саны: '+ negative)
-}
-const numbers = +prompt("")
-showDiffNumbers(numbers)
+// уй жумысы\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+// let footbol = ["Роналду" , "Зидан" , "Неймар" , "Бензема" ,] 
+// footbol[1] = "Месси"
+// footbol[4] = "Руни"
+// if(footbol.length>=5){
+//     console.log("Футболистердін саны көп")
+// }
+// else{
+//     console.log("Футболистердін саны аз");
+// }
+// console.log(footbol.length);
+
+
