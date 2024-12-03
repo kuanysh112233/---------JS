@@ -1,33 +1,37 @@
 
 
-// Үй жумыс\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-// 1 задание
+// Үй жумысы ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-let number = [1 , 2 , 3 , 4 , 5]
-alert("Бастапқы массивті сандар:   " + number)
-let triple =number.map(num => num * num * num);
-alert("Сандардын кубтанганнан кейің:   " + triple)
-for (let num of triple) {
-    if(num%2!==0){
-        console.log("Кубталған сандардын ішіндегі тақ сандар:  " + num)
+
+let Footbol = {
+    name: "Ronaldo",
+    lastname: "Cristiano",
+    goal: 913,
+    age: 39,
+    club: ["Sporting","Man United","Real Madrid","Juventus","Al-Nasr"],
+
+  
+
+    fullName: function(){
+        return  `${this.lastname} ${this.name}`
+    },
+    
+    songyclub: function(){
+         return this.club[this.club.length - 1];
     }
-}
+    
+}; 
 
-// 2 задание 
+alert(`Name: ${Footbol.name} \nLastname: ${Footbol.lastname} \nGoal: ${Footbol.goal} \nAge: ${Footbol.age}  \nClubs: ${Footbol.club}`);
 
-let isStudent = +prompt("Қанша студент бар? ")
-let studentGrades = []
-while(isStudent!==0){
-    const number = +prompt("Студентін бағасы:  ")
-    console.log("Студенттің бағасы:  " + number);
-    studentGrades.push(number)
-    isStudent-- 
-}
-const totalSum = studentGrades.reduce((total, num) => total + num , 0)
-console.log("Ортақ баға:  " + totalSum / studentGrades.length);
-const gradesMoreThan85 = studentGrades.filter(grade=>grade>=85)
-console.log("85 -тен жоғары бағалар:  " + gradesMoreThan85);
+Footbol.goal +=2
+
+console.log(`Имя игрока: ${Footbol.fullName()} \nПоследний клуб, который играл: ${Footbol.songyclub()} \nКоличество забитых мячей в карьере игрока: ${Footbol.goal}`);
+
+
+
+
 
 
 
