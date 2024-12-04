@@ -3,7 +3,7 @@
 // age=25,
 // isStudent=true,
 // ageInStr ='25'
-// console.log(`Аты: ${studentName} | типі: ${typeof studentName}`)
+// console.log(`Аты: ${studentName} | типі: ${tyeeof studentName}`)
 // console.log(`Жасы ${age} | типі: ${typeof age}`)
 // console.log(`Студент пе ${isStudent} | типі: ${typeof isStudent}`)
 // console.log(`Жасы жол ретінде ${ageInStr} | типі: ${typeof ageInStr}`)
@@ -1102,7 +1102,7 @@
 //     married: "ДА",
 //     children:1,
 //     info:function(){
-//         return `Ваше имя ${this.name} \nВаше возраст:  ${this.age} лет  \nВаше место-рождения:  ${this.born} \nВаше место-прописка:  ${this.registration} \nЖенатыливы:  ${this.married} \nEсли увас дети:  ${this.children} ребенык `
+        // return `Ваше имя ${this.name} \nВаше возраст:  ${this.age} лет  \nВаше место-рождения:  ${this.born} \nВаше место-прописка:  ${this.registration} \nЖенатыливы:  ${this.married} \nEсли увас дети:  ${this.children} ребенык `
 //     }
 // }
 // console.log(man.info());
@@ -1272,46 +1272,161 @@
 // console.log(flatted.join(","));
 
 ////////////////////////////// практика///////////////////////////////////////////
-let classs = {
-    student:[
-                {
-                    name:"Куаныш",
-                    age:27,
-                    lessons:["Алгебра","Химия","Физика"],
-                },
-                {
-                    name:"Назерке",
-                    age:18,
-                    lessons:["Английский","География","Литература"],
-                },
-                {
-                    name:"Дина",
-                    age:26,
-                    lessons:["Английский","Литература","Алгебра"],
-                },
-            ]
-}
+// let classs = {
+//     student:[
+//                 {
+//                     name:"Куаныш",
+//                     age:27,
+//                     lessons:["Алгебра","Химия","Физика"],
+//                 },
+//                 {
+//                     name:"Назерке",
+//                     age:18,
+//                     lessons:["Английский","География","Литература"],
+//                 },
+//                 {
+//                     name:"Дина",
+//                     age:26,
+//                     lessons:["Английский","Литература","Алгебра"],
+//                 },
+//             ]
+// }
 
 // console.log(classs);                        /////1//////
 // let flatted = classs.student.flatMap(lesson=>lesson.lessons)
 // console.log(flatted);
 
-function youngStudent(){                        /////2/////
-    let min = classs[0].age
-    let jasOqushy = ""
-    for(let i=1;i<classs.length;i++){
-        if(min>classs[i].age){
-            min = classs[i].age
-            jasOqushy = classs[i].name
+// function youngStudent(){                        /////2/////
+//     let min = classs[0].age
+//     let jasOqushy = ""
+//     for(let i=1;i<classs.length;i++){
+//         if(min>classs[i].age){
+//             min = classs[i].age
+//             jasOqushy = classs[i].name
+//         }
+//     }
+//     alert("ен жас окушы" + jasOqushy + "\nжасы" +min)
+// }
+// youngStudent()
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// let student = {name:"Kuanysh" , nickname:"OTSA_CITY", age:27}
+// let {nickname, age} = student
+
+
+// console.log(nickname);             ///1 тури
+// console.log(age);
+
+// let info = {...student, hobby:"play gamin"}
+// console.log(info);
+
+
+// let number = [10,20,30,40,50,60]
+
+// let [ num1, num2, num3, num4, num5] = number
+
+// console.log(num1);                   ///2 тури
+// console.log(num2);
+// console.log(num3);
+
+// let name = ["Efrat","Beka","Gulnara","Kuanysh","Aziz",...number]
+// console.log(name);
+
+
+// let arr1 = [1,2,3,4,5]
+// let arr2 = [6,7,8,9,10]
+
+// let merget = [...arr1,...arr2];
+// console.log(merget);
+
+
+// let arr3 = [1,2,3,4,5,6]
+// let [a,b,...reseted] = arr3
+
+// console.log(arr3);
+
+
+
+// практика
+
+// let book = { title: "Абай жолы", author: "Мұхтар Әуезов", year: 1942 };
+// let {title,author,year} = book
+
+// console.log(book);
+// console.log(title);          ///1
+// console.log(author);
+// console.log(year);
+
+
+// let fruits = ["алма", "алмұрт", "шие"];
+// let{fruit, ...ostalnye} = fruits                ///2
+
+// console.log(fruits);
+
+
+// let arr1 = [1, 2, 3];
+// let arr2 = [4, 5, 6];               ///3
+// let  number =[...arr1,...arr2] 
+// console.log(number);
+
+
+// let user = { name: "Али", age: 25 };
+// let {name,age} = user                       ////4
+// let plus = {...user, hobby: "нет"}
+// console.log(plus);
+
+
+
+
+// let person = {
+//     name: prompt("Атынызды жазыныз"),
+//     age: +prompt("Жасынызды жазыныз"),
+//     hobby: prompt("Хоббиинизди жазыныз")
+// }
+// let {name,age,hobby} = person
+
+// if(age<0){                                        /////5
+//     alert("Сен әлі туылмадын")
+// }
+// else if(age>18 && age<100){
+//     alert("Сен ересексін")
+// }
+// else if(age>100){
+//     alert("Қашан өлесін")
+// }
+// else{
+//     alert("Еу шигол")
+// }
+
+let people = {
+    name:"Оқушылардын атты",
+    student: [
+        {
+            name:"Азиз",
+            age:23,
+            hobby:"кино",
+        },
+        {
+            name:"Айсулу",
+            age:32,
+            hobby:"музыка",
+        },
+        {
+            name:"Гулнара",
+            age:32,
+            hobby:"игры",
         }
+    ],
+    addStudent:function(){
+    },
+    showEvery: function(){
+        return this.student
     }
-    alert("ен жас окушы" + jasOqushy + "\nжасы" +min)
 }
-youngStudent()
 
-
-
-
+let WD
 
 
 
