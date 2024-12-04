@@ -37,7 +37,6 @@ let student=[
         }
         console.log("МЕМЛЕКЕТ",student[i].country); 
     }
-
 2///////
 
 // const classA = ["Амина", "Әділ", "Әлина"];
