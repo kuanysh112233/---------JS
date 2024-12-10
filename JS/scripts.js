@@ -1464,24 +1464,55 @@
 // alert("Ең жоғары бал алған:  " + scoreMan + "\nОнын балы:  " + maxScore)
 
 
-2///////////
+// 2///////////
 
-let product = [
-    {name:"Samsung",price:300000,},
-    {name:"Iphone",price:400000,},
-    {name:"Meizu",price:180000,},
-    {name:"Huawei",price:200000,}
-]
-console.log(product);
-////////////////////////////
-let evaluations2 = product.filter(product=>product.price>200000)
-console.log(evaluations2);
-//////////////////////////
-console.log(evaluations2.reduce((total, num)=>total + num,0));
+// let product = [
+//     {name:"Samsung",price:300000,},
+//     {name:"Iphone",price:400000,},
+//     {name:"Meizu",price:180000,},
+//     {name:"Huawei",price:200000,}
+// ]
+// console.log(product);
+// ////////////////////////////
+// let evaluations2 = product.filter(product=>product.price>200000)
+// console.log(evaluations2);
+// //////////////////////////
+// console.log(evaluations2.reduce((total, num)=>total + num,0));
 
-3///////////
-4///////////
-5///////////
+// 3///////////
+// 4///////////
+// 5///////////
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// let taqyryp = document.getElementById('title')
+// console.log(taqyryp);
+
+// let textter = document.getElementsByClassName('text')
+// console.log(textter[0].textContent); //// 1//////
+
+// let element = document.querySelector
+
+
+let taqyryp =document.getElementById('news-title')
+taqyryp.textContent = "JavaScript жаңартулары"
+
+let mazmun = document.querySelector('#news-content')
+mazmun.innerHTML = "JavaScript бағдарламалау әлеміндегі ең соңғы жаңалықтарды оқыңыз."
+
+let silteme = document.querySelector('#news-link')
+silteme.href = "https://google.com"
+
+
+
+
+
+
+
+
+
+
 
 
 
