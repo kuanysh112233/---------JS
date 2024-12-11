@@ -1495,15 +1495,63 @@
 // let element = document.querySelector
 
 
-let taqyryp =document.getElementById('news-title')
-taqyryp.textContent = "JavaScript жаңартулары"
+// let taqyryp =document.getElementById('news-title')
+// taqyryp.textContent = "JavaScript жаңартулары"
 
-let mazmun = document.querySelector('#news-content')
-mazmun.innerHTML = "JavaScript бағдарламалау әлеміндегі ең соңғы жаңалықтарды оқыңыз."
+// let mazmun = document.querySelector('#news-content')
+// mazmun.innerHTML = "JavaScript бағдарламалау әлеміндегі ең соңғы жаңалықтарды оқыңыз."
 
-let silteme = document.querySelector('#news-link')
-silteme.href = "https://google.com"
+// let silteme = document.querySelector('#news-link')
+// silteme.href = "https://google.com"
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function buttenClick(){
+    alert("hello guss ")
+}
+
+let taqyryp = document.getElementById("title")
+
+taqyryp.addEventListener("dblclick",function(){
+    taqyryp.style.fontSize = "50px";
+    taqyryp.style.color = "red";
+   alert("и че хочешь")
+} )
+
+let qorap = document.querySelector('.box')
+
+qorap.addEventListener("mouseenter",function(){
+    qorap.style.backgroundColor = "red"
+    qorap.style.transitionDuration = "3s"
+    qorap.style.borderRadius = "20%"
+})
+qorap.addEventListener('mouseleave',function(){
+    qorap.style.backgroundColor = "white"
+    qorap.style.transitionDuration = "1s"
+    qorap.style.borderRadius = "40%"
+})
+
+let items = document.getElementsByClassName('element')
+
+for(let element of items){
+    element.addEventListener("mouseenter",function(){
+    element.style.fontSize = "20px";
+    element.style.color = "red";
+    })
+    element.addEventListener("mouseleave",function(){
+    element.style.fontSize = "20px";
+    element.style.color = "black";
+    })
+
+}
+let items2 = document.getElementById('noll')
+let items3 = document.getElementById('qosyndy')
+
+items3.addEventListener("click",function(){
+
+    let sanQosu = parseInt(items2.textContent)
+    items2.textContent = sanQosu+1
+})
 
 
 
