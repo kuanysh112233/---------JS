@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <div style="display: flex; flex-direction: column; align-items: center;;">
+        <h1>ACS-ке анонимді пікір қалдыру формасы</h1>
+        <form id="form" style="display: flex; flex-direction: column; align-items: center;">
+            <label for="name">Тобыңыз:</label>
+            <select name="name" id="select">
+                <option value=""></option>
+                <option value="24/1">24/1</option>
+                <option value="24/2">24/2</option>
+                <option value="24/3">24/3</option>
+                <option value="24/4">24/4</option>
+            </select>
+            <label for="text">Оқу орталығы қысқаша екі сөзбен: </label>
+            <textarea name="text" id="textarea" required></textarea>
+            <div>
+                <label for="range">Орталықты 0-10 арасындағы бағаланыз</label>
+            <input name="range" type="range" id="input">
+            <span id = 'rangeNumber'>0</span>
+            </div>
+            <p id="error"></p>
+            <button id="btn">Жіберу</button>
+        </form>
+    </div>
+    <script async src="index.js"></script>
+</body>
+</html> 

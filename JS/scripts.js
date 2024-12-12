@@ -1506,58 +1506,108 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-function buttenClick(){
-    alert("hello guss ")
-}
+// function buttenClick(){
+//     alert("hello guss ")
+// }
 
-let taqyryp = document.getElementById("title")
+// let taqyryp = document.getElementById("title")
 
-taqyryp.addEventListener("dblclick",function(){
-    taqyryp.style.fontSize = "50px";
-    taqyryp.style.color = "red";
-   alert("и че хочешь")
-} )
+// taqyryp.addEventListener("dblclick",function(){
+//     taqyryp.style.fontSize = "50px";
+//     taqyryp.style.color = "red";
+//    alert("и че хочешь")
+// } )
 
-let qorap = document.querySelector('.box')
+// let qorap = document.querySelector('.box')
 
-qorap.addEventListener("mouseenter",function(){
-    qorap.style.backgroundColor = "red"
-    qorap.style.transitionDuration = "3s"
-    qorap.style.borderRadius = "20%"
+// qorap.addEventListener("mouseenter",function(){
+//     qorap.style.backgroundColor = "red"
+//     qorap.style.transitionDuration = "3s"
+//     qorap.style.borderRadius = "20%"
+// })
+// qorap.addEventListener('mouseleave',function(){
+//     qorap.style.backgroundColor = "white"
+//     qorap.style.transitionDuration = "1s"
+//     qorap.style.borderRadius = "40%"
+// })
+
+// let items = document.getElementsByClassName('element')
+
+// for(let element of items){
+//     element.addEventListener("mouseenter",function(){
+//     element.style.fontSize = "20px";
+//     element.style.color = "red";
+//     })
+//     element.addEventListener("mouseleave",function(){
+//     element.style.fontSize = "20px";
+//     element.style.color = "black";
+//     })
+
+// }
+// let items2 = document.getElementById('noll')
+// let items3 = document.getElementById('qosyndy')
+
+// items3.addEventListener("click",function(){
+
+//     let sanQosu = parseInt(items2.textContent)
+//     items2.textContent = sanQosu+1
+// })
+
+// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+let formInput = document.getElementById('form')
+let error = document.getElementById('errorMassege')
+
+formInput.addEventListener('submit',(event)=>{
+    event.preventDefault() // сактап калад
+    let emalInput = document.getElementById('email').value // mail корсетед
+    let passwordInput = document.getElementById('password').value // парол корсетет
+    
+    console.log("email",emalInput);
+    console.log("password",passwordInput);  
+
+    if(!emalInput.includes('@')){
+        error.textContent = 'Увась проблема с EMALI.RU !!!'
+    }
+    else if(passwordInput.length <= 6){
+        error.textContent = 'ваш пароль менши 6 цифыр'
+    }
+    else{
+        error.textContent = ''
+        error.style.color = 'green'
+        error.textContent = 'увась взе впорядки!!!!'
+        console.log({email: emalInput,  password:passwordInput});
+    }
 })
-qorap.addEventListener('mouseleave',function(){
-    qorap.style.backgroundColor = "white"
-    qorap.style.transitionDuration = "1s"
-    qorap.style.borderRadius = "40%"
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+let dropDown = document.getElementById('dropdown')
+let text = document.getElementById('tandalgan')
+
+dropDown.addEventListener('change',()=>{
+    text.textContent = dropDown.value
 })
 
-let items = document.getElementsByClassName('element')
+// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-for(let element of items){
-    element.addEventListener("mouseenter",function(){
-    element.style.fontSize = "20px";
-    element.style.color = "red";
-    })
-    element.addEventListener("mouseleave",function(){
-    element.style.fontSize = "20px";
-    element.style.color = "black";
-    })
+let focused = document.getElementById('focus')
+let paragraf = document.getElementById('focusedText')
 
-}
-let items2 = document.getElementById('noll')
-let items3 = document.getElementById('qosyndy')
-
-items3.addEventListener("click",function(){
-
-    let sanQosu = parseInt(items2.textContent)
-    items2.textContent = sanQosu+1
+focused.addEventListener('focus',()=>{
+    paragraf.textContent = 'как ты'
+})
+focused.addEventListener('blur',()=>{
+    paragraf.textContent = 'норм'
 })
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+let inputed = document.getElementById('inputed')
+let text1 = document.getElementById('text1')
 
-
-
-
+inputed.addEventListener('input', ()=>{
+    text1.textContent = inputed.value
+})
 
 
 
@@ -1578,7 +1628,6 @@ items3.addEventListener("click",function(){
 
 
  
-
 
 
 
