@@ -1555,59 +1555,114 @@
 
 // //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-let formInput = document.getElementById('form')
-let error = document.getElementById('errorMassege')
+// let formInput = document.getElementById('form')
+// let error = document.getElementById('errorMassege')
 
-formInput.addEventListener('submit',(event)=>{
-    event.preventDefault() // сактап калад
-    let emalInput = document.getElementById('email').value // mail корсетед
-    let passwordInput = document.getElementById('password').value // парол корсетет
+// formInput.addEventListener('submit',(event)=>{
+//     event.preventDefault() // сактап калад
+//     let emalInput = document.getElementById('email').value // mail корсетед
+//     let passwordInput = document.getElementById('password').value // парол корсетет
     
-    console.log("email",emalInput);
-    console.log("password",passwordInput);  
+//     console.log("email",emalInput);
+//     console.log("password",passwordInput);  
 
-    if(!emalInput.includes('@')){
-        error.textContent = 'Увась проблема с EMALI.RU !!!'
-    }
-    else if(passwordInput.length <= 6){
-        error.textContent = 'ваш пароль менши 6 цифыр'
-    }
-    else{
-        error.textContent = ''
-        error.style.color = 'green'
-        error.textContent = 'увась взе впорядки!!!!'
-        console.log({email: emalInput,  password:passwordInput});
-    }
-})
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//     if(!emalInput.includes('@')){
+//         error.textContent = 'Увась проблема с EMALI.RU !!!'
+//     }
+//     else if(passwordInput.length <= 6){
+//         error.textContent = 'ваш пароль менши 6 цифыр'
+//     }
+//     else{
+//         error.textContent = ''
+//         error.style.color = 'green'
+//         error.textContent = 'увась взе впорядки!!!!'
+//         console.log({email: emalInput,  password:passwordInput});
+//     }
+// })
+// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-let dropDown = document.getElementById('dropdown')
-let text = document.getElementById('tandalgan')
+// let dropDown = document.getElementById('dropdown')
+// let text = document.getElementById('tandalgan')
 
-dropDown.addEventListener('change',()=>{
-    text.textContent = dropDown.value
-})
+// dropDown.addEventListener('change',()=>{
+//     text.textContent = dropDown.value
+// })
 
-// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// // //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-let focused = document.getElementById('focus')
-let paragraf = document.getElementById('focusedText')
+// let focused = document.getElementById('focus')
+// let paragraf = document.getElementById('focusedText')
 
-focused.addEventListener('focus',()=>{
-    paragraf.textContent = 'как ты'
-})
-focused.addEventListener('blur',()=>{
-    paragraf.textContent = 'норм'
-})
+// focused.addEventListener('focus',()=>{
+//     paragraf.textContent = 'как ты'
+// })
+// focused.addEventListener('blur',()=>{
+//     paragraf.textContent = 'норм'
+// })
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-let inputed = document.getElementById('inputed')
-let text1 = document.getElementById('text1')
+// let inputed = document.getElementById('inputed')
+// let text1 = document.getElementById('text1')
 
-inputed.addEventListener('input', ()=>{
-    text1.textContent = inputed.value
-})
+// inputed.addEventListener('input', ()=>{
+//     text1.textContent = inputed.value
+// })
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// let tizim = document.createElement('ul')
+// tizim.textContent = 'hellooooooooooooooooooooooooooooooooooo'
+
+// let tizim1 = document.createElement('h5')
+// tizim1.textContent = "ЭТО СЛОВА"
+
+// let divElement = document.getElementById('container')
+// divElement.appendChild(tizim)
+// divElement.appendChild(tizim1)
+
+//////////////////////////
+
+// let batyrma = document.getElementById('buteen')
+// let tizim = document.createElement('ul')
+// let i = 1
+
+// let divElement = document.getElementById('container')
+// // HTML Кужат косылды
+// divElement.appendChild(tizim)
+
+// batyrma.addEventListener('click',()=>{
+//     let tizimElement = document.createElement('li')
+//     tizimElement.textContent = `Тизим елеменрт ${i++}`
+//     tizim.appendChild(tizimElement)
+// })
+
+/////////////////////////////////////////////
+
+// let name = [ {name:"Aisaule" },{name:"Ifrat"},{ name:"Gulnara"},{name:"Aziz" }]
+
+// let batyrma = document.getElementById('buteen')
+// let tizim = document.createElement('ul')
+// // let i = 1
+// let divElement = document.getElementById('container')
+// //HTML kosylady
+// divElement.appendChild(tizim)
+
+// for(let element of name){
+
+// }
+////////////////////////////////////////////
+
+// let containerElement = document.getElementById('container') // ata-analyk element
+// let secondElrment = document.getElementById('second') // bala element
+
+// let butten = document.getElementById('removeButton')
+
+// butten.addEventListener('click',()=>{
+//     containerElement.removeChild(secondElrment)
+// })
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
