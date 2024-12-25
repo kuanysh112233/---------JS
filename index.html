@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="JS/index.css">
 </head>
-<body>
+<body id="body">
 
     <!-- <div id="news-card" class="card">
         <h2 id="news-title">Ескі тақырып</h2>
@@ -75,7 +75,7 @@
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- практика -->
 
-<h1 >My First ToDo App</h1>
+<!-- <h1 >My First ToDo App</h1>
 <p>Тапсырма мәтінін өзгеру үшін - тізімдегңтапсырманы екі рет бас</p>
 
 <form id="form">
@@ -89,7 +89,95 @@
     </div>
 </form>
 <div id="list-box">
+</div> -->
+
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<!-- <h1>Блог Жазбалары</h1>
+
+<form>
+    <div class="input-group">
+        <label for="titleInput">Тақырып</label>
+        <input type="text" id="titleInput" placeholder="Тақырыпты енгізана">
+    </div>
+    
+    <div class="input-group">
+        <label for="contentInput">Мазмұн</label>
+        <textarea placeholder="Мазмұнди кальмия" id="contentInput"></textarea>
+    </div>
+        <button id="addPostBtn" class="button">Жазба косу</button>
+</form>
+
+<div id="blogPosts" class="blog-posts">
+</div> -->
+
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<!-- <h1>DOM Manipulation with CSS Classes</h1>
+
+<button id="btn">НАЖМИ МЕНЯ</button>
+<script>
+    let btn = document.getElementById('btn')
+    // btn.addEventListener('click',()=>{
+    //     btn.classList.toggle('btn-styled') ///оширип косады
+    // })
+
+    if(btn.classList.contains('btn-styled')){
+        alert("Батырмаға btn-styled қосылды")
+    }
+    else{
+        alert("Батырмадан btn-styled өшірілді")
+    }
+
+</script> -->
+<!-- Практика -->
+<div>
+    <h1 id="h1">Жарық режимі</h1>
+    <p>Бұл парақ қараңғы және жарық режимдерге ауыса алады.</p>
+    <button id="btn1">Режимді ауыстыру</button>
 </div>
+<script>
+    let body = document.getElementById('body')
+    let h1 = document.getElementById('h1')
+    let btn = document.getElementById('btn1')
+    btn.addEventListener("click",()=>{
+        body.classList.toggle('body-styled')
+        if(body.classList.contains('body-styled')){
+            h1.textContent = 'Жарық режимі'
+        }
+        else{
+            h1.textContent = 'Тунги рижжим'
+        }
+    })
+</script>
+
+<!-- Практика 2-->
+ <div>
+    <h1>Ауыстырғыш түйме</h1>
+    <button id="btn2">Мәтінді жасыру/көрсету</button>
+    <p id="p">Бұл мәтін жасырылуы немесе керсетілуі мүмкін</p>
+ </div>
+ <script>
+let btn2 = document.getElementById('btn2')
+let pa = document.getElementById('p')
+btn2.textContent = 'Мәтінді жасыру'
+btn2.addEventListener('click',()=>{
+    pa.classList.add('hidden')
+    if(pa.classList.contains('hidden')){
+        btn2.textContent = 'Мәтінді жасыру'
+    }
+})
+btn2.addEventListener('click',()=>{
+    pa.classList.add('hidden')
+    if(!pa.classList.contains('hidden')){
+        btn2.textContent = 'Мәтінді көрсету'
+    }
+})
+
+
+ </script>
+
+
 <script src="JS/scripts.js"></script>
 </body>
 </html>
