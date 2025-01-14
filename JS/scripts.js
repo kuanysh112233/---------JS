@@ -1769,6 +1769,105 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+// setTimeout(()=>{
+//     console.log("кідірістен кейінгі 1");
+    
+// },1000)
+
+// setTimeout(()=>{
+//     console.log("кідірістен кейінгі 2");
+    
+// },2000)
+
+// setTimeout(()=>{
+//     console.log("кідірістен кейінгі 3");
+    
+// },3000)
+
+// setTimeout(()=>{
+//     console.log("кідірістен кейінгі 4");
+// },4000)
+
+// //////////////////////////////////////////////////
+
+// let count = 0
+
+// let interval = setInterval(()=>{
+//     count++
+//     console.log(`санак саны: ${count}`);
+//     if(count==5){
+//         clearInterval(interval)
+//     }
+    
+// },1000)
+
+// //////////////////////////////////////////////////
+
+// function fethDate(){
+// console.log("Деректер алыну басталды")
+// setTimeout(()=>{
+//     console.log("Дерек:" , {name:"КУАНЫШ",work:"МАСТЕР"});
+// },4000)
+// setTimeout(()=>{
+//     console.log("Дерктер алынуда...");
+// },1000)
+// }
+// fethDate()
+
+// практика1 ///////////////////////////////////////////////
+
+// const users = [
+//     { id: 1, name: "Алихан", age: 25 },
+//     { id: 2, name: "Айгерім", age: 30 }, 
+//     { id: 3, name: "Медет", age: 22 },
+// ]
+
+// console.log("Деректер алыну басталды")
+
+// setTimeout(()=>{
+//     console.log("Дерктер алынуда...");
+// },1000)
+// setTimeout(()=>{
+//     console.log(users);
+// },2000)
+
+// практика2 ///////////////////////////////////////////////
+
+// let time = document.getElementById("time")
+// let end =document.getElementById("end")
+// let times = parseInt(time.textContent)
+
+// setInterval(()=>{
+//     times--;
+//     if(times>0){
+//         time.textContent = times
+//     }
+//     else{
+//         time.textContent = ""
+//         end.textContent = "УАҚЫТ АЯҚТАЛДЫ"
+//     }
+// },1000)
+
+// практика3 ///////////////////////////////////////////////
+
+// let time = document.getElementById("time")
+// let end =document.getElementById("end")
+// let times = parseInt(time.textContent)
+
+// setInterval(()=>{
+//     times--;
+//     if(times>0){
+//         time.textContent = times
+//     }
+//     else{
+//         time.textContent = ""
+//         end.textContent = "УАҚЫТ АЯҚТАЛДЫ"
+//     }
+// },1000)
+
+
+
+
 
 
 
