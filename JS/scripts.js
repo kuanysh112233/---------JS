@@ -1865,6 +1865,76 @@
 //     }
 // },1000)
 
+// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// let time = 100
+
+// function otjimanya(otjimanyaSanaq){
+//     return new Promise((resolve, reject)=>{
+//         if(otjimanyaSanaq>100){
+//             reject(new Error("тым коп отжимания жасадым!"))
+//         }
+//         setTimeout(()=>{
+//             resolve()
+//         },otjimanyaSanaq*time)
+//     })
+// }
+// function presaniy(presedaniySanaq){
+//     return new Promise((resolve, reject)=>{
+//         if(presedaniySanaq>200){
+//             reject(new Error("тым коп присидания жасадым!"))
+//         }
+//         setTimeout(()=>{
+//             resolve()
+//         },presedaniySanaq*time)
+//     })
+// }
+
+// console.log("Жаттығу жасалу басталды!");
+
+
+// otjimanya(100).then(()=>{
+//     console.log("Сіз сәтті турде отжимания жасадыныз!");
+//     return presaniy(201)
+// }).then(()=>{
+//     console.log("Сіз сәтті турде присидания жасадыныз!");
+    
+// }).catch((err)=>{
+//     console.log(err.toString());
+    
+// })
+
+///////////////////////////////////
+
+// fetch('https://jsonplaceholder.typicode.com/users').then(qoldanushylar=>{
+//     if(qoldanushylar.ok){
+//         console.log("Сервирден қабылдап алынған қолданушылар: " , qoldanushylar.json());
+//     }
+// }).catch(()=>{
+//     console.log("Аұпараттарды қабылдап алу мүмкін емес");
+// })
+
+function fetchDate(silteme){
+    return new Promise((resolve,reject)=>{
+        fetch(silteme).then(response=>{
+            if(response.ok){
+                resolve(response.json())
+            }else{
+                reject(new Error(""))
+            }
+        })
+    })
+}
+fetchDate('https://jsonplaceholder.typicode.com/users').then(response=>{
+    response.forEach((item)=>{
+        console.log(item.name);
+    })
+}).catch(err=>{
+    console.log(err.toString());
+})
+
+// практика1 //////////////////////////////////////////////////////////////////////////////////////////
+
 
 
 
