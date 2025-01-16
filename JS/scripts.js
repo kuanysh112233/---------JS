@@ -1914,30 +1914,113 @@
 //     console.log("Аұпараттарды қабылдап алу мүмкін емес");
 // })
 
-function fetchDate(silteme){
-    return new Promise((resolve,reject)=>{
-        fetch(silteme).then(response=>{
-            if(response.ok){
-                resolve(response.json())
-            }else{
-                reject(new Error(""))
+// function fetchDate(silteme){
+//     return new Promise((resolve,reject)=>{
+//         fetch(silteme).then(response=>{
+//             if(response.ok){
+//                 resolve(response.json())
+//             }else{
+//                 reject(new Error(""))
+//             }
+//         })
+//     })
+// }
+// fetchDate('https://jsonplaceholder.typicode.com/users').then(response=>{
+//     response.forEach((item)=>{
+//         console.log(item.name);
+//     })
+// }).catch(err=>{
+//     console.log(err.toString());
+// })
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// function fetchdata(url) {
+//     return new Promise((resolve,reject) =>{
+//         fetch(url).then(response=>{
+//             if(response.ok){
+//                 resolve(response.json())
+//             }else{
+//                 reject(new Error("Aqparattardy alu mumkin bolmady!"))
+//             }
+//         })
+       
+//     })
+    
+// }
+// fetchdata(' https://jsonplaceholder.typicode.com/users ').then((otvet)=>{
+//     displayData(otvet)
+//  }).catch(qate=>{
+//      console.log(qate.toString());
+    
+//  })
+
+//  function displayData(massiv){
+//     console.log(massiv);
+
+//     let conteyner = document.querySelector('.conteyner')
+
+//     massiv.forEach(element=>{
+//         let divElement = document.createElement('div')
+//         let name =  document.createElement('h2')
+//         let paragraf =  document.createElement('p')
+
+//         name.textContent = element.name
+//         paragraf.textContent = element.email
+
+//         divElement.appendChild(name)
+//         divElement.appendChild(paragraf)
+
+//         conteyner.appendChild(divElement)
+         
+//         divElement.className = ("div")
+//         name.className = ("h2")
+//         paragraf.className = ("p")
+//     })
+    
+//  }
+
+//  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function fetchdata(url) {
+        return new Promise((resolve,reject) =>{
+            fetch(url).then(response=>{
+                if(response.ok){
+                    resolve(response.json())
+                }else{
+                    reject(new Error("Aqparattardy alu mumkin bolmady!"))
+                }
+            })
+           
+        })
+        
+    }
+    fetchdata(' https://jsonplaceholder.typicode.com/posts ').then((otvet)=>{
+        muraEl(otvet)
+}).catch(qate=>{
+         console.log(qate.toString());
+
+})
+
+function muraEl(massiv){
+    console.log(massiv);
+
+    let btn = document.getElementById('btn')
+    let result = document.querySelector('.result')
+
+    btn.addEventListener('click',()=>{
+        let text = document.getElementById('text').value
+        let searsh = lext.toLowerCase()
+
+        massiv.forEach(element=>{
+            if(){
+                
             }
         })
     })
+    
+
 }
-fetchDate('https://jsonplaceholder.typicode.com/users').then(response=>{
-    response.forEach((item)=>{
-        console.log(item.name);
-    })
-}).catch(err=>{
-    console.log(err.toString());
-})
-
-// практика1 //////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
 
 
 
