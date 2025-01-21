@@ -1982,50 +1982,123 @@
 
 //  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-function fetchdata(url) {
-        return new Promise((resolve,reject) =>{
-            fetch(url).then(response=>{
-                if(response.ok){
-                    resolve(response.json())
-                }else{
-                    reject(new Error("Aqparattardy alu mumkin bolmady!"))
-                }
-            })
+// function fetchdata(url) {
+//         return new Promise((resolve,reject) =>{
+//             fetch(url).then(response=>{
+//                 if(response.ok){
+//                     resolve(response.json())
+//                 }else{
+//                     reject(new Error("Aqparattardy alu mumkin bolmady!"))
+//                 }
+//             })
            
-        })
+//         })
         
-    }
-    fetchdata(' https://jsonplaceholder.typicode.com/posts ').then((otvet)=>{
-        muraEl(otvet)
-}).catch(qate=>{
-         console.log(qate.toString());
+//     }
+//     fetchdata(' https://jsonplaceholder.typicode.com/posts ').then((otvet)=>{
+//         muraEl(otvet)
+// }).catch(qate=>{
+//          console.log(qate.toString());
 
-})
+// })
 
-function muraEl(massiv){
-    console.log(massiv);
+// function muraEl(massiv){
+//     console.log(massiv);
 
-    let btn = document.getElementById('btn')
-    let result = document.querySelector('.result')
+//     let btn = document.getElementById('btn')
+//     let result = document.querySelector('.result')
 
-    btn.addEventListener('click',()=>{
-        let text = document.getElementById('text').value
-        let searsh = lext.toLowerCase()
+//     btn.addEventListener('click',()=>{
+//         let text = document.getElementById('text').value
+//         let searsh = lext.toLowerCase()
 
-        massiv.forEach(element=>{
-            if(){
-                
-            }
-        })
-    })
+//         massiv.forEach(element=>{
+//             if(){
+
+//             }
+//         })
+//     })
     
 
+// }
+
+// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/// 1 тури
+// function fetchDate(){
+//     fetch('https://67873274c4a42c916105d2fe.mockapi.io/api/onlineduken/products').then(response=>{
+//         return response.json()
+//     }).then(otvet=>{
+//         console.log(otvet);
+//     }).catch(()=>{
+//         console.log("Error");
+        
+//     })
+// }
+
+// fetchDate()
+
+/// 2 тури
+// async function fetchDate(){
+//     try{
+//         let user = await fetch ('https://67873274c4a42c916105d2fe.mockapi.io/api/onlineduken/products')
+//         if(!user.ok){
+//             throw new Error("Акпарат алу мумкин емес");
+//         }
+//         let date = await user.json()
+//         console.log(date);
+//     }catch(err){
+//         console.log(err);
+        
+//     }
+// }
+
+// fetchDate()
+
+// 1 практика /////////////////////////////////////////////////////////////////////////////////////////////////
+
+async function fetchPosts(){
+    try{
+        let user = await fetch ('https://jsonplaceholder.typicode.com/posts')
+        if(!user.ok){
+            throw new Error("Акпарат алу мумкин емес");
+        }
+        let date = await user.json()
+        console.log(date);        
+    }catch(err){
+        console.log(err);        
+    }
 }
+fetchPosts()
 
+// 2 практика//////////////////////////////////////////////////////////////////////////////////////////////////////
 
+async function fethcData(){
+        try{
+            let response = await fetch('https://67873274c4a42c916105d2fe.mockapi.io/api/onlineduken/products')
+            if(!response.ok){
+                throw new Error ("NEW ERROR")
+            }
+            let date = await response.json()
+            console.log(date);
+            let container1 = document.getElementById('container1')
 
+            for(let i=0; i<date.length; i++){
+                let div = document.createElement('div')
 
- 
+                div.innerHTML = `
+                <h2>${date[i].name}</h2>
+                <p>${date[i].price}</p>`
+
+                container1.appendChild(div)
+            }
+        }catch(err){
+            console.log(err);
+            
+        }
+}
+fethcData()
 
 
 
