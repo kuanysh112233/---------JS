@@ -20,6 +20,16 @@ body{
     background-color: rgba(1, 144, 254, 0.2);
    
 }
+.next-btn{
+    border-radius: 5px;
+    margin: 3px;
+    font-size: 17px;
+    box-shadow: 5px 5px 17px -5px rgb(0, 44, 77);
+    transition: 0.5s ease;
+}
+.next-btn:hover{
+    background-color: rgba(68, 111, 145, 0.2);
+}
 .question-option{
     border-radius: 5px;
     margin: 3px;

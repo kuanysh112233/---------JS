@@ -7,6 +7,6 @@ let countdown = setInterval(() => {
         timerElement.textContent = timeLeft;
     } else {
         clearInterval(countdown);
-        document.getElementById('timer').textContent = 'Уақыт аяқталды!';
+        
     }
 }, 1000);

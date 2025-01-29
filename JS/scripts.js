@@ -1514,7 +1514,7 @@
 
 // taqyryp.addEventListener("dblclick",function(){
 //     taqyryp.style.fontSize = "50px";
-//     taqyryp.style.color = "red";
+//     taqyryp.
 //    alert("и че хочешь")
 // } )
 
@@ -2058,48 +2058,110 @@
 
 // 1 практика /////////////////////////////////////////////////////////////////////////////////////////////////
 
-async function fetchPosts(){
-    try{
-        let user = await fetch ('https://jsonplaceholder.typicode.com/posts')
-        if(!user.ok){
-            throw new Error("Акпарат алу мумкин емес");
-        }
-        let date = await user.json()
-        console.log(date);        
-    }catch(err){
-        console.log(err);        
-    }
-}
-fetchPosts()
+// async function fetchPosts(){
+//     try{
+//         let user = await fetch ('https://jsonplaceholder.typicode.com/posts')
+//         if(!user.ok){
+//             throw new Error("Акпарат алу мумкин емес");
+//         }
+//         let date = await user.json()
+//         console.log(date);        
+//     }catch(err){
+//         console.log(err);        
+//     }
+// }
+// fetchPosts()
 
 // 2 практика//////////////////////////////////////////////////////////////////////////////////////////////////////
 
-async function fethcData(){
-        try{
-            let response = await fetch('https://67873274c4a42c916105d2fe.mockapi.io/api/onlineduken/products')
-            if(!response.ok){
-                throw new Error ("NEW ERROR")
-            }
-            let date = await response.json()
-            console.log(date);
-            let container1 = document.getElementById('container1')
+// async function fethcData(){
+//         try{
+//             let response = await fetch('https://67873274c4a42c916105d2fe.mockapi.io/api/onlineduken/products')
+//             if(!response.ok){
+//                 throw new Error ("NEW ERROR")
+//             }
+//             let date = await response.json()
+//             console.log(date);
+//             let container1 = document.getElementById('container1')
 
-            for(let i=0; i<date.length; i++){
-                let div = document.createElement('div')
+//             for(let i=0; i<date.length; i++){
+//                 let div = document.createElement('div')
 
-                div.innerHTML = `
-                <h2>${date[i].name}</h2>
-                <p>${date[i].price}</p>`
+//                 div.innerHTML = `
+//                 <h2>${date[i].name}</h2>
+//                 <p>${date[i].price}</p>`
 
-                container1.appendChild(div)
-            }
-        }catch(err){
-            console.log(err);
+//                 container1.appendChild(div)
+//             }
+//         }catch(err){
+//             console.log(err);
             
-        }
-}
-fethcData()
+//         }
+// }
+// fethcData()
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// let div = document.createElement('div')
+
+// localStorage.setItem('name','Kuanysh')
+// localStorage.setItem('surname','Token')
+// localStorage.setItem('hobby','GAME')
+
+// let hobby = localStorage.getItem('hobby')
+// let surname = localStorage.getItem('surname')
+// let name = localStorage.getItem('name')
+
+// localStorage.clear()
+
+// div.innerHTML = `
+// <h1>${name}</h1>
+// <h3>${surname}</h3>
+// <h5>${hobby}</h5>
+// `
+
+// document.body.appendChild(div)
+
+// 1 практика .............
+
+let div = document.createElement('div')
+let date = document.querySelector('.date')
+
+document.getElementById('saktauBtn').addEventListener('click' , function(e){
+    e.preventDefault()
+    let nameValue = document.getElementById('name').value
+    let numberValue = document.getElementById('number').value
+
+    if(nameValue && numberValue){
+        localStorage.setItem('name', nameValue)
+        localStorage.setItem('number', numberValue)
+    }
+    div.innerHTML = `
+    <h1>${nameValue}</h1>
+    <h1>${numberValue}</h1>`
+
+    date.appendChild(div)
+})
+
+document.getElementById('korsetuBtn').addEventListener("click" , function(e){
+    e.preventDefault()
+    let nameValue = localStorage.getItem('name')
+    let numberValue = localStorage.getItem('number')
+
+    if(nameValue && numberValue){
+        div.innerHTML = `
+        <h1>${nameValue}</h1>
+        <h1>${numberValue}</h1>`
+    }
+
+    date.appendChild(div)
+})
+
+document.getElementById('clearBtn').addEventListener("click" , function(e){
+    e.preventDefault()
+    localStorage.clear()
+    window.location.reload()
+})
 
 
 
