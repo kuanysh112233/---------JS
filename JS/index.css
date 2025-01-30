@@ -34,3 +34,8 @@ body{
 }
 
 /* ////////////////////////////// */
+
+.dark-made{
+    background-color: black;
+    color: white;
+}

@@ -48,11 +48,11 @@ main();
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-let tizim = 'https://randomuser.me/api'
+// let tizim = 'https://randomuser.me/api'
 
-async function main() {
-    const apiUrl = 'https://randomuser.me/api';
-    const users = await fetchUserData(apiUrl);
-    displayUsers(users);
-}
-main();
+// async function main() {
+//     const apiUrl = 'https://randomuser.me/api';
+//     const users = await fetchUserData(apiUrl);
+//     displayUsers(users);
+// }
+// main();

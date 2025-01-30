@@ -2124,49 +2124,121 @@
 
 // 1 практика .............
 
-let div = document.createElement('div')
-let date = document.querySelector('.date')
+// let div = document.createElement('div')
+// let date = document.querySelector('.date')
 
-document.getElementById('saktauBtn').addEventListener('click' , function(e){
-    e.preventDefault()
-    let nameValue = document.getElementById('name').value
-    let numberValue = document.getElementById('number').value
+// document.getElementById('saktauBtn').addEventListener('click' , function(e){
+//     e.preventDefault()
+//     let nameValue = document.getElementById('name').value
+//     let numberValue = document.getElementById('number').value
 
-    if(nameValue && numberValue){
-        localStorage.setItem('name', nameValue)
-        localStorage.setItem('number', numberValue)
+//     if(nameValue && numberValue){
+//         localStorage.setItem('name', nameValue)
+//         localStorage.setItem('number', numberValue)
+//     }
+//     div.innerHTML = `
+//     <h1>${nameValue}</h1>
+//     <h1>${numberValue}</h1>`
+
+//     date.appendChild(div)
+// })
+
+// document.getElementById('korsetuBtn').addEventListener("click" , function(e){
+//     e.preventDefault()
+//     let nameValue = localStorage.getItem('name')
+//     let numberValue = localStorage.getItem('number')
+
+//     if(nameValue && numberValue){
+//         div.innerHTML = `
+//         <h1>${nameValue}</h1>
+//         <h1>${numberValue}</h1>`
+//     }
+
+//     date.appendChild(div)
+// })
+
+// document.getElementById('clearBtn').addEventListener("click" , function(e){
+//     e.preventDefault()
+//     localStorage.clear()
+//     window.location.reload()
+// })
+
+
+// 2 практика//////////////////////////////////////////////////////////////////////////////
+
+// let massiv = []
+
+// document.getElementById('saktauBtn').addEventListener('click', function(e){
+//     e.preventDefault()
+//     let nameValue = document.getElementById('name').value
+//     let numberValue = document.getElementById('number').value
+
+//     if(nameValue && numberValue){
+//         massiv.push({name:nameValue,age:numberValue})
+//         sessionStorage.setItem('info', JSON.stringify(massiv))
+//     }else{
+//         alert("Ақпатартарды толтыруды сураймыз")
+//     }
+// })
+
+// let korsetuBtn = document.getElementById('korsetuBtn').addEventListener('click', function(e){
+//     e.preventDefault()
+
+//     let aqparat = JSON.parse(sessionStorage.getItem('info'))
+
+//     if(aqparat){
+//     aqparat.textContent = ''
+//     aqparat.forEach((element,i) => {
+//         let div = document.createElement('div')
+//         div.innerHTML = `
+//         <h4>INDEX: ${i}</h4>
+//         <h1>${element.name}</h1>
+//         <h3>${element.age}</h3>
+//         <button onclick="oshirBtn(${i})">Өшіру</button>`
+
+//         document.body.appendChild(div)
+//     }); 
+//     }
+// })
+
+// function oshirBtn(index){
+//     massiv = JSON.parse(sessionStorage.getItem('info'))
+//     massiv = massiv.filter((el,i)=>index != i)
+//     sessionStorage.setItem('info',JSON.stringify(massiv))
+//     window.location.reload()
+// }
+
+// document.getElementById('clearBtn').addEventListener("click" , function(e){
+//     e.preventDefault()
+//     sessionStorage.clear()
+//     window.location.reload()
+// })
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+let btn = document.getElementById('btn')
+
+btn.addEventListener('click',()=>{
+    let qazirgiTema = document.body.classList.toggle('dark-made')
+
+    localStorage.setItem('theme', qazirgiTema ? "dark" : "light")
+
+    document.getElementById('btn').textContent = qazirgiTema? "Жарық режім" : "Қаранғы режим"
+})
+
+function displayTheme(){
+    let rezhim = localStorage.getItem('theme')
+
+    console.log(rezhim);
+
+    if(rezhim== "dark"){
+        document.body.classList.add('dark-made')
+        document.getElementById('btn').textContent = "Жарық режим"
+    }else{
+        document.getElementById('btn').textContent = "Қара режим"
     }
-    div.innerHTML = `
-    <h1>${nameValue}</h1>
-    <h1>${numberValue}</h1>`
-
-    date.appendChild(div)
-})
-
-document.getElementById('korsetuBtn').addEventListener("click" , function(e){
-    e.preventDefault()
-    let nameValue = localStorage.getItem('name')
-    let numberValue = localStorage.getItem('number')
-
-    if(nameValue && numberValue){
-        div.innerHTML = `
-        <h1>${nameValue}</h1>
-        <h1>${numberValue}</h1>`
-    }
-
-    date.appendChild(div)
-})
-
-document.getElementById('clearBtn').addEventListener("click" , function(e){
-    e.preventDefault()
-    localStorage.clear()
-    window.location.reload()
-})
-
-
-
-
-
+}
+displayTheme()
 
 
 
