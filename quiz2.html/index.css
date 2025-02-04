@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url('https://region.center/data/Pogoda-pictures/Winter/13.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+img{
+    width: 35px;
+    height: 35px;
+    color: white;
+}
+
+input{
+    width: 500px;
+    height: 30px;
+    background-color:darkblue;
+    color: grey;
+    border-radius: 7px;
+}
+
+.weatherWebsite{
+    padding: 100px;
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.citySearchEngine{
+    width: 600px;
+}
+
+.citySearchEngine{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 45px;
+}
+
+.weatherForTheDay1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.weatherForTheDay2{
+    display: flex;
+    flex-direction: row;
+}
+
+.ForADay{
+    display: flex;
+    padding: 10px;
+}
+
+.weekday{
+    padding: 20px;
+}
+
+.weatherForTheWeek{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

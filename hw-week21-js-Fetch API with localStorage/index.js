@@ -11,7 +11,7 @@ function displayData() {
         div.innerHTML = ` <img src = "${film.image}"
         <h2>${film.filmName}</h2>
         <h4>${film.Genre}</h4>
-        <button onclick="oshirBtn(${i})">Өшіру</button>
+        <button onclick="oshirBtn(${i}                                                           )">Өшіру</button>
         `
         qorap.appendChild(div)
     });
