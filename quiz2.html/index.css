@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url('https://region.center/data/Pogoda-pictures/Winter/13.jpg');
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKGr3ViGpC7Gs6Bnw1dVkJ6HGFivWhkqyTdA&s');
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
@@ -13,30 +13,39 @@ img{
 }
 
 input{
+    border: none;
     width: 500px;
     height: 30px;
-    background-color:darkblue;
-    color: grey;
+    background-color:rgb(26, 26, 26);
+    color:white;
     border-radius: 7px;
+}
+button{
+    border: none;
+    margin: 10px 130px;
+    width: 200px;
+    height: 30px;
+    border-radius: 4px;
+    color: white;
+    background-color: rgb(26, 26, 26);
 }
 
 .weatherWebsite{
-    padding: 100px;
+    padding: 70px;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     gap: 100px;
 }
 
 .citySearchEngine{
     width: 600px;
-}
-
-.citySearchEngine{
+    height: 500px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    padding-left: 45px;
+    justify-content:space-around;
 }
+
 
 .weatherForTheDay1{
     display: flex;
@@ -47,19 +56,24 @@ input{
 .weatherForTheDay2{
     display: flex;
     flex-direction: row;
+    
 }
 
 .ForADay{
-    display: flex;
-    padding: 10px;
-}
-
-.weekday{
-    padding: 20px;
-}
-
-.weatherForTheWeek{
+    text-align: center;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    padding-left: 15px;
 }
+
+
+.weekday{
+    display: flex;
+    flex-direction: row ;
+}
+.TheWeek{
+    display: ;
+    text-align: center;
+}
+
