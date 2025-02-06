@@ -1723,48 +1723,48 @@
 
 // /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// let posts = []
+let posts = []
 
-// function addpost(event){
-//     event.preventDefault()
-//     const titleInput = document.getElementById('titleInput')
-//     const contentInput = document.getElementById('contentInput')
+function addpost(event){
+    event.preventDefault()
+    const titleInput = document.getElementById('titleInput')
+    const contentInput = document.getElementById('contentInput')
 
-//     if(titleInput.value && contentInput.value){
-//         const post = {
-//             id: Date.now(),
-//             title: titleInput.value,
-//             content: contentInput.value
-//         }
-//         posts.push(post)
+    if(titleInput.value && contentInput.value){
+        const post = {
+            id: Date.now(),
+            title: titleInput.value,
+            content: contentInput.value
+        }
+        posts.push(post)
         
-//         renderPosts()
+        renderPosts()
         
-//         titleInput.value = ''
-//         contentInput.value = ''
-//     }
-// }
+        titleInput.value = ''
+        contentInput.value = ''
+    }
+}
 
-// function renderPosts(){
-//     const blogPostsDiv = document.getElementById('blogPosts')
-//     blogPostsDiv.innerHTML = ''
+function renderPosts(){
+    const blogPostsDiv = document.getElementById('blogPosts')
+    blogPostsDiv.innerHTML = ''
 
-//     posts.forEach(post=>{
-//         const postDiv = document.createElement('div')
-//         postDiv.className = 'post'
-//         postDiv.innerHTML = `
-//             <h2>${post.title}</h2>
-//             <p>${post.content}</p>
-//             <small>${post.id}</small>
-//             <button class="button" style="background-color: orange;" >ӨНДЕУ</button>
-//             <button class="button" style="background-color: red;">ЖОЮ</button>
-//     `
-//     blogPostsDiv.appendChild(postDiv)
-//     })
-// }
+    posts.forEach(post=>{
+        const postDiv = document.createElement('div')
+        postDiv.className = 'post'
+        postDiv.innerHTML = `
+            <h2>${post.title}</h2>
+            <p>${post.content}</p>
+            <small>${post.id}</small>
+            <button class="button" style="background-color: orange;" >ӨНДЕУ</button>
+            <button class="button" style="background-color: red;">ЖОЮ</button>
+    `
+    blogPostsDiv.appendChild(postDiv)
+    })
+}
 
-// let addbtn = document.getElementById('addPostBtn')
-// addbtn.addEventListener('click',addpost)
+let addbtn = document.getElementById('addPostBtn')
+addbtn.addEventListener('click',addpost)    
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -2216,29 +2216,29 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-let btn = document.getElementById('btn')
+// let btn = document.getElementById('btn')
 
-btn.addEventListener('click',()=>{
-    let qazirgiTema = document.body.classList.toggle('dark-made')
+// btn.addEventListener('click',()=>{
+//     let qazirgiTema = document.body.classList.toggle('dark-made')
 
-    localStorage.setItem('theme', qazirgiTema ? "dark" : "light")
+//     localStorage.setItem('theme', qazirgiTema ? "dark" : "light")
 
-    document.getElementById('btn').textContent = qazirgiTema? "Жарық режім" : "Қаранғы режим"
-})
+//     document.getElementById('btn').textContent = qazirgiTema? "Жарық режім" : "Қаранғы режим"
+// })
 
-function displayTheme(){
-    let rezhim = localStorage.getItem('theme')
+// function displayTheme(){
+//     let rezhim = localStorage.getItem('theme')
 
-    console.log(rezhim);
+//     console.log(rezhim);
 
-    if(rezhim== "dark"){
-        document.body.classList.add('dark-made')
-        document.getElementById('btn').textContent = "Жарық режим"
-    }else{
-        document.getElementById('btn').textContent = "Қара режим"
-    }
-}
-displayTheme()
+//     if(rezhim== "dark"){
+//         document.body.classList.add('dark-made')
+//         document.getElementById('btn').textContent = "Жарық режим"
+//     }else{
+//         document.getElementById('btn').textContent = "Қара режим"
+//     }
+// }
+// displayTheme()
 
 
 
